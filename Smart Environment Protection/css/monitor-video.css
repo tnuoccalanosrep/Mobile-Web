@@ -1,0 +1,38 @@
+/*--------头部样式-------------*/
+body {
+	background-color: #eee;
+}
+
+/*---------自定义头部nav样式----------*/
+.haunle {
+	position: relative;
+	top: -12px;
+	left: -14px;
+}
+.center {
+	text-align: center;
+	margin: 0 25px;
+	padding-left: 0px;
+}
+.center li {
+  opacity: 0.7;
+  transition: all 300ms ease;
+  margin:0 12px;
+}
+
+.center .slick-center {
+  -moz-transform: scale(1.08);
+  -ms-transform: scale(1.08);
+  -o-transform: scale(1.08);
+  -webkit-transform: scale(1.08);
+  color: #5eb95e;
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+
+.video-field {
+	height: 180px;
+	border: 1px dashed darkmagenta;
+	margin-top:-20px;
+}

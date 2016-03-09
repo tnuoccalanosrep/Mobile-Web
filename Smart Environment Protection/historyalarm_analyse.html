@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>History Alarm Demo</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<link rel="stylesheet" href="css/amazeui.min.css" />
+		<!--自定义css-->
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/historyalarm_analyse.css" />
+		
+		<script src="js/jquery.js"></script>
+		<script src="js/amazeui.js"></script>
+		<!--自定义js-->
+		<script type="text/javascript" src="js/base.js"></script>
+	</head>
+	<body>
+		<header data-am-widget="header" class="am-header am-header-default" id="nav-header" data-am-sticky>
+	      	<div class="am-header-left am-header-nav">
+	          <a href="#" class="">
+				<img class="am-header-icon-custom" src="data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 12 20&quot;&gt;&lt;path d=&quot;M10,0l2,2l-8,8l8,8l-2,2L0,10L10,0z&quot; fill=&quot;%23fff&quot;/&gt;&lt;/svg&gt;" alt=""/>
+	          </a>
+	      	</div>
+	      	<h1 class="am-header-title">
+				历史报表分析
+	        </h1>
+	        <div class="am-header-right am-header-nav">
+	        	<span class="am-icon-filter am-icon-sm" 
+	        	data-am-modal="{target: '#filter-modal', closeViaDimmer: 1, width: 370, height:280}">
+		        </span>
+	        </div>
+      	</header>
+      	<div style="margin: 10px 8px;">
+			报警类型：<div style="display: inline-block;color: #1B961B;">水量异常</div>
+			<br>
+			时间间隔：<div style="display: inline-block;color:#1B961B">2015-09-16至2016-02-12</div>
+		</div>
+		<table class="am-table am-table-striped">
+			<tbody>
+				<tr id="table_header">
+					<td>开始-结束时间</td>
+					<td>进水量</td>
+					<td>排水量</td>
+					<td>回用水量</td>
+					<td>差额比</td>
+					<td>运转时间</td>
+				</tr>
+				<tr>
+					<td>09/26-09-27</td>
+					<td>978</td>
+					<td>152</td>
+					<td>-</td>
+					<td>-</td>
+					<td>548</td>
+				</tr>
+					<td>09/26-09-27</td>
+					<td>978</td>
+					<td>152</td>
+					<td>-</td>
+					<td>-</td>
+					<td>548</td>
+				<tr>
+					<td>09/26-09-27</td>
+					<td>978</td>
+					<td>152</td>
+					<td>-</td>
+					<td>-</td>
+					<td>548</td>
+				</tr>
+				<tr>
+					<td>09/26-09-27</td>
+					<td>978</td>
+					<td>152</td>
+					<td>-</td>
+					<td>-</td>
+					<td>548</td>
+				</tr>
+				<tr>
+					<td>09/26-09-27</td>
+					<td>978</td>
+					<td>152</td>
+					<td>-</td>
+					<td>-</td>
+					<td>548</td>
+				</tr>
+				<tr>
+					<td>09/26-09-27</td>
+					<td>978</td>
+					<td>152</td>
+					<td>-</td>
+					<td>-</td>
+					<td>548</td>
+				</tr>
+				<tr>
+					<td>09/26-09-27</td>
+					<td>978</td>
+					<td>152</td>
+					<td>-</td>
+					<td>-</td>
+					<td>548</td>
+				</tr>
+				<tr>
+					<td>09/26-09-27</td>
+					<td>978</td>
+					<td>152</td>
+					<td>-</td>
+					<td>-</td>
+					<td>548</td>
+				</tr>
+				<tr>
+					<td>09/26-09-27</td>
+					<td>978</td>
+					<td>152</td>
+					<td>-</td>
+					<td>-</td>
+					<td>548</td>
+				</tr>
+				<tr>
+					<td>09/26-09-27</td>
+					<td>978</td>
+					<td>152</td>
+					<td>-</td>
+					<td>-</td>
+					<td>548</td>
+				</tr>
+			</tbody>
+		</table>
+		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default" id="nav-bottom">
+			<ul class="am-navbar-nav am-cf am-avg-sm-4">
+				<li>
+					<a href="main.html">
+						<span class="am-icon-home"></span>
+						<span class="am-navbar-label">首页</span>
+					</a>
+				</li>
+				<li>
+					<a href="monitor.html" class="">
+						<span class="am-icon-video-camera"></span>
+						<span class="am-navbar-label">过程监控</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="">
+						<span class="am-icon-bar-chart-o"></span>
+						<span class="am-navbar-label">统计报表</span>
+					</a>
+				</li>
+				<li>
+					<a href="more.html" class="">
+						<span class="am-icon-ellipsis-h"></span>
+						<span class="am-navbar-label">更多</span>
+					</a>
+				</li>
+			</ul>
+  		</div>
+  		
+  		<!--模态窗口-->
+  		
+  		<div class="am-modal am-modal-alert" tabindex="-1" id="filter-modal" >
+			<div class="am-modal-dialog">
+				<div class="am-modal-hd">
+					请选择
+					<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+				</div>
+				<div class="am-modal-bd" style="text-align:left;">
+					<div style="padding-left:1rem">告警类型：</div>
+					<div class="am-g">
+						<div class="am-u-sm-6">
+							<label class="am-checkbox">
+								<input type="checkbox" value="" data-am-ucheck> 水量异常
+							</label>
+							<label class="am-checkbox">
+								<input type="checkbox" checked="checked" value="" data-am-ucheck checked>排水量回用异常
+							</label>
+							<label class="am-checkbox">
+								<input type="checkbox" value="" data-am-ucheck> PH超标
+							</label>
+						</div>
+			
+						<div class="am-u-sm-6">
+							<label class="am-checkbox">
+								<input type="checkbox" name="radio1" value="" data-am-ucheck> 零排放回用异常
+							</label>
+							<label class="am-checkbox">
+								<input type="checkbox" name="radio1" value="" data-am-ucheck> 治理设施闲置
+							</label>
+						</div>
+					</div>
+			
+					<div style="padding-left:1rem;">时间：</div>
+					<div class="am-g" style="text-align:center;">
+						<div class="am-u-sm-5">
+							<div class="am-input-group am-input-group-sm am-datepicker-date" data-am-datepicker>
+								<input type="text" class="am-form-field" sytle="width:120px;" placeholder="请选择时间" readonly>
+								<span class="am-input-group-label am-icon-angle-down am-datepicker-add-on"></span>
+							</div>
+						</div>
+						<div class="am-u-sm-1">
+							至
+						</div>
+						<div class="am-u-sm-5 am-u-end">
+							<div class="am-input-group am-input-group-sm am-datepicker-date" data-am-datepicker>
+								<input type="text" class="am-form-field" sytle="width:120px;" placeholder="请选择时间" readonly>
+								<span class="am-input-group-label am-icon-angle-down am-datepicker-add-on"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="am-modal-footer">
+					<span class="am-modal-btn">确定</span>
+				</div>
+			</div>
+		</div>
+  		
+	</body>
+</html>

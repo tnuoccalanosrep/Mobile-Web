@@ -1,0 +1,22 @@
+/*--------顶部Nav样式-------*/
+#nav-header {
+	background-color:#5eb95e;
+}
+
+body{
+	padding-bottom: 60px;
+}
+
+/*----底部Nav的样式----*/
+#nav-bottom ul{
+	background-color:#F3F3F3;
+	border-top: 1px solid #AAAAAA;
+}
+
+.am-navbar ul li a {
+	color: #c4c4c4;
+}
+
+.am-navbar ul li a:hover {
+	color: #1B961B;
+}

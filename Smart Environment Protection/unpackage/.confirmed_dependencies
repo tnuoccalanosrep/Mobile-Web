@@ -1,0 +1,79 @@
+{
+	"login.html": {
+		"resources": [
+			"js/base.js",
+			"css/base.css",
+			"js/login.js",
+			"js/encript.js",
+			"js/amazeui.js",
+			"fonts/fontawesome-webfont.woff",
+			"css/amazeui.min.css",
+			"js/jquery.js"
+		],
+		"refer": []
+	},
+	"main.html": {
+		"resources": [
+			"js/base.js",
+			"css/base.css",
+			"img/star.png",
+			"css/main.css",
+			"img/waring.png",
+			"img/non-star.png",
+			"js/amazeui.js",
+			"fonts/fontawesome-webfont.woff",
+			"css/amazeui.min.css",
+			"js/jquery.js",
+			"more.html",
+			"monitor.html"
+		],
+		"refer": [
+			"more.html",
+			"monitor.html"
+		]
+	},
+	"more.html": {
+		"resources": [
+			"img/admin.png",
+			"css/more.css",
+			"main.html",
+			"monitor.html",
+			"historyalarm_analyse.html"
+		],
+		"refer": [
+			"historyalarm_analyse.html",
+			"monitor.html"
+		]
+	},
+	"monitor.html": {
+		"resources": [
+			"img/gp_monitor.png",
+			"img/warinng_circle.png",
+			"css/monitor.css",
+			"img/tick.png",
+			"more.html",
+			"main.html"
+		],
+		"refer": [
+			"more.html",
+			"main.html"
+		]
+	},
+	"historyalarm_analyse.html": {
+		"resources": [
+			"css/historyalarm_analyse.css",
+			"main.html",
+			"js/base.js",
+			"css/base.css",
+			"js/amazeui.js",
+			"fonts/fontawesome-webfont.woff",
+			"css/amazeui.min.css",
+			"js/jquery.js",
+			"monitor.html"
+		],
+		"refer": [
+			"main.html",
+			"monitor.html"
+		]
+	}
+}

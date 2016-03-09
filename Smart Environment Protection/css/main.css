@@ -1,0 +1,124 @@
+/*---------默认背景，panel样式----------*/
+body {
+	background-color: #eee;
+}
+
+.am-panel {
+	margin-top: 10px;
+}
+/*
+#nav-header {
+	background-color:#5eb95e;
+}
+
+.am-navbar ul li a {
+	color: #c4c4c4;
+}
+
+.am-navbar ul li a:hover {
+	color: #1B961B;
+}
+*/
+
+/*---------自定义头部nav样式----------*/
+.haunle {
+	position: relative;
+	top: -12px;
+	left: -14px;
+}
+
+/*------体检list的样式--------*/
+.g-widget-list li {
+	border: 0px;
+	padding: 0px 20px;
+	margin: -5px 0px;
+}
+
+.g-widget-list li a {
+	color: #000;
+	margin-left: -10px;
+}
+
+.g-widget-list li a::after {
+	display: inline-block;
+	font: normal normal normal 1.6rem/1 FontAwesome, sans-serif;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0, 0);
+	content: "\f054";
+	position: absolute;
+	right: 10px;
+	color: #ccc;
+	top: 50%;
+	margin-top: -8px;
+}
+
+.g-widget-list li a h2 {
+	font-weight: 700;
+}
+
+.g-widget-list li a span {
+	margin-left: 40px;
+	font-size: 25px;
+	color: #4AAA4A;
+}
+/*----------第一个面板第二列的样式-----------*/
+.g-widget-list .g-evaluation {
+	text-align: center;
+	font-size: 15px;
+}
+.g-widget-list .g-evaluation img {
+	width:50px;
+	margin-bottom: 2px;
+}
+
+/*--------告警list的样式---------*/
+.g-waring-list li a {
+	display: inline-block;
+	color: #000000;
+}
+
+.g-waring-list li a div {
+	display: inline-block;
+	margin: 0px 20px;
+	vertical-align: middle;
+}
+
+.g-waring-list li a::after {
+	display: inline-block;
+	font: normal normal normal 1.6rem/1 FontAwesome, sans-serif;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0, 0);
+	content: "\f054";
+	position: absolute;
+	right: 10px;
+	color: #ccc;
+	top: 50%;
+	margin-top: -8px;
+}
+.g-waring-list li a div{
+	color: #000000;
+}
+.waring-info{
+	color:red;
+}
+/*
+-------底部Nav样式--------
+#nav-bottom ul{
+	background-color:#F3F3F3;
+	border-top: 1px solid #AAAAAA;
+}
+
+.am-navbar ul li a {
+	color: #c4c4c4;
+}
+
+.am-navbar ul li a:hover {
+	color: #1B961B;
+}
+*/

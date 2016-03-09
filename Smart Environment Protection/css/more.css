@@ -1,0 +1,69 @@
+body {
+	background-color: #eee;
+}
+
+/*---------自定义头部nav样式----------*/
+.haunle {
+	position: relative;
+	top: -12px;
+	left: -14px;
+}
+
+/*------图片panel样式------*/
+#personal-info { 
+	/*background: url(../img/admin.png);*/
+	height: 120px;
+	margin-bottom: 20px;
+}
+
+#personal-info div{
+	display: table-cell;
+	padding:25px;
+	vertical-align: middle;
+}
+#personal-info div img{
+	margin-left: 20px;
+	box-sizing: border-box;
+}
+
+#personal-info div span{
+	padding-left: 20px;
+	font-weight: 700;
+}
+
+/*------More List 的样式--------*/
+
+.m-more-list li a i{
+	color: #5eb95e;
+	text-align: center;
+	width: 36px;
+}
+
+.m-more-list li a span{
+	color: #000000;
+	margin-left: 20px;
+}
+
+.m-more-list li a::after {
+	display: inline-block;
+	font: normal normal normal 1.6rem/1 FontAwesome, sans-serif;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0, 0);
+	content: "\f054";
+	position: absolute;
+	right: 10px;
+	color: #ccc;
+	top: 50%;
+	margin-top: -8px;
+}
+
+/*------退出按钮的样式-----*/
+.am-btn-white {
+	background-color: #FFF;
+	padding:10px;
+	
+}
+

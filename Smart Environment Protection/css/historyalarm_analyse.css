@@ -1,0 +1,38 @@
+/*
+-----------顶部Nav样式-----------
+#nav-header{
+	background-color:#5eb95e;
+}
+*/
+/*------table的样式-----*/
+#table_header{
+	font-size: 12px;
+}
+
+.am-table tbody{
+	font-size: 12px;
+}
+
+#table_header>td {
+	background-color: #ABABAB;
+	line-height: 1.6;
+}
+
+.am-table>tbody>tr>td {
+	line-height: 3;
+}
+/*
+-------底部Nav样式---------
+#nav-bottom ul{
+	background-color:#F3F3F3;
+	border-top: 1px solid #AAAAAA;
+}
+
+.am-navbar ul li a {
+	color: #c4c4c4;
+}
+
+.am-navbar ul li a:hover {
+	color: #1B961B;
+}
+*/
