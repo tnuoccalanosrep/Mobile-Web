@@ -33,7 +33,7 @@ document.getElementsByTagName('html')[0].onclick = function(e) {
 };
 */
 function isFunctionNode(nodeName){
-	if(nodeName != 'a' && nodeName != 'button'){
+	if(nodeName != 'a' && nodeName != 'button' && nodeName !='input'){
 		return false;
 	}
 	else{
