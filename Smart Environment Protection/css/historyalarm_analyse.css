@@ -5,15 +5,16 @@
 }
 */
 /*------table的样式-----*/
-#table_header{
-	font-size: 12px;
-}
 
 .am-table tbody{
-	font-size: 12px;
+	font-size: 14px;
 }
 
-#table_header>td {
+.am-table tbody tr:first-child {
+	font-size: 11px;
+	font-weight: 700;
+}
+.am-table tbody tr:first-child>td {
 	background-color: #ABABAB;
 	line-height: 1.6;
 }

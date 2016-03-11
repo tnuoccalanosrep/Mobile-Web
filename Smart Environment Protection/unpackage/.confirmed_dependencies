@@ -8,9 +8,12 @@
 			"js/amazeui.js",
 			"fonts/fontawesome-webfont.woff",
 			"css/amazeui.min.css",
-			"js/jquery.js"
+			"js/jquery.js",
+			"welcome.html"
 		],
-		"refer": []
+		"refer": [
+			"welcome.html"
+		]
 	},
 	"main.html": {
 		"resources": [
@@ -25,11 +28,19 @@
 			"css/amazeui.min.css",
 			"js/jquery.js",
 			"more.html",
-			"monitor.html"
+			"monitor.html",
+			"img/f-bad.png",
+			"img/f-good.png",
+			"img/f-best.png",
+			"img/f-medium.png",
+			"login.html",
+			"report.html"
 		],
 		"refer": [
 			"more.html",
-			"monitor.html"
+			"monitor.html",
+			"login.html",
+			"report.html"
 		]
 	},
 	"more.html": {
@@ -38,11 +49,13 @@
 			"css/more.css",
 			"main.html",
 			"monitor.html",
-			"historyalarm_analyse.html"
+			"historyalarm_analyse.html",
+			"report.html"
 		],
 		"refer": [
 			"historyalarm_analyse.html",
-			"monitor.html"
+			"monitor.html",
+			"report.html"
 		]
 	},
 	"monitor.html": {
@@ -69,11 +82,32 @@
 			"fonts/fontawesome-webfont.woff",
 			"css/amazeui.min.css",
 			"js/jquery.js",
-			"monitor.html"
+			"monitor.html",
+			"js/historyalarm_analyse.js"
 		],
 		"refer": [
 			"main.html",
 			"monitor.html"
+		]
+	},
+	"welcome.html": {
+		"resources": [
+			"main.html",
+			"img/welcome.png",
+			"css/amazeui.css"
+		],
+		"refer": [
+			"main.html"
+		]
+	},
+	"report.html": {
+		"resources": [
+			"more.html",
+			"js/report.js",
+			"css/report.css"
+		],
+		"refer": [
+			"more.html"
 		]
 	}
 }

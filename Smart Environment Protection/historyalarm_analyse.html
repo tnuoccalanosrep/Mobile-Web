@@ -17,6 +17,8 @@
 		<script src="js/amazeui.js"></script>
 		<!--自定义js-->
 		<script type="text/javascript" src="js/base.js"></script>
+		<script type="text/javascript" src="js/historyalarm_analyse.js" ></script>
+		
 	</head>
 	<body>
 		<header data-am-widget="header" class="am-header am-header-default am-header-fixed" id="nav-header">
@@ -41,7 +43,7 @@
 		</div>
 		<table class="am-table am-table-striped">
 			<tbody>
-				<tr id="table_header">
+				<tr>
 					<td>开始-结束时间</td>
 					<td>进水量</td>
 					<td>排水量</td>
@@ -49,6 +51,7 @@
 					<td>差额比</td>
 					<td>运转时间</td>
 				</tr>
+				<!--
 				<tr>
 					<td>09/26-09/27</td>
 					<td>978</td>
@@ -127,8 +130,28 @@
 					<td>-</td>
 					<td>548</td>
 				</tr>
+				-->
 			</tbody>
 		</table>
+		
+		<ul data-am-widget="pagination" class="am-pagination am-pagination-select">
+		
+			<li class="am-pagination-prev">
+				<a href="#" class="">上一页</a>
+			</li>
+		
+			<li class="am-pagination-select">
+				<select>
+					<option value="#" class="">0 / 0
+					</option>
+				</select>
+			</li>
+		
+			<li class="am-pagination-next ">
+				<a href="#" class="">下一页</a>
+			</li>
+		</ul>
+		
 		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default" id="nav-bottom">
 			<ul class="am-navbar-nav am-cf am-avg-sm-4">
 				<li>
@@ -171,22 +194,22 @@
 					<div class="am-g">
 						<div class="am-u-sm-6">
 							<label class="am-checkbox">
-								<input type="checkbox" value="" data-am-ucheck> 水量异常
+								<input type="checkbox" value="1" data-am-ucheck> 水量异常
 							</label>
 							<label class="am-checkbox">
-								<input type="checkbox" checked="checked" value="" data-am-ucheck checked>排水量回用异常
+								<input type="checkbox" value="3" data-am-ucheck>排水量回用异常
 							</label>
 							<label class="am-checkbox">
-								<input type="checkbox" value="" data-am-ucheck> PH超标
+								<input type="checkbox" value="5" data-am-ucheck> PH超标
 							</label>
 						</div>
 			
 						<div class="am-u-sm-5 am-u-end" style="margin-left: 20px;">
 							<label class="am-checkbox">
-								<input type="checkbox" name="radio1" value="" data-am-ucheck> 零排放回用异常
+								<input type="checkbox" name="radio1" value="2" data-am-ucheck> 零排放回用异常
 							</label>
 							<label class="am-checkbox">
-								<input type="checkbox" name="radio1" value="" data-am-ucheck> 治理设施闲置
+								<input type="checkbox" name="radio1" value="4" data-am-ucheck> 治理设施闲置
 							</label>
 						</div>
 					</div>
@@ -194,7 +217,7 @@
 					<div class="g-padding-left">时间：</div>
 					<div class="am-g g-align-center">
 						<div class="am-u-sm-5">
-							<div class="am-input-group am-input-group-sm am-datepicker-date" data-am-datepicker>
+							<div class="am-input-group am-input-group-sm am-datepicker-date" id="start-time" data-am-datepicker>
 								<input type="text" class="am-form-field" style="width:100px;" placeholder="请选择时间" readonly>
 								<span class="am-input-group-label am-icon-angle-down am-datepicker-add-on"></span>
 							</div>
@@ -203,16 +226,15 @@
 							至
 						</div>
 						<div class="am-u-sm-5 am-u-end">
-							<div class="am-input-group am-input-group-sm am-datepicker-date" data-am-datepicker>
+							<div class="am-input-group am-input-group-sm am-datepicker-date" id="end-time" data-am-datepicker>
 								<input type="text" class="am-form-field" style="width:100px;" placeholder="请选择时间" readonly>
 								<span class="am-input-group-label am-icon-angle-down am-datepicker-add-on"></span>
 							</div>
 						</div>
 					</div>
-					<div class="g-btn-resize">
+					<div class="g-btn-resize" id="btn-confirm">
 						<button type="button" class="am-btn am-btn-success am-btn-block">确定</button>
-					</div>						
-					
+					</div>
 				</div>
 			</div>
 		</div>
