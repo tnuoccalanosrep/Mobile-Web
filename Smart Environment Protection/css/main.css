@@ -67,7 +67,8 @@ body {
 /*----------第一个面板第二列的样式-----------*/
 .g-widget-list .g-evaluation {
 	text-align: center;
-	font-size: 15px;
+	font-size: 14px;
+	font-weight: 900;
 }
 .g-widget-list .g-evaluation img {
 	width:50px;

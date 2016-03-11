@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<link rel="stylesheet" href="css/amazeui.css" />
+	</head>
+	<body>
+		<img src="img/welcome.png" alt="" width="100%"/>
+		<script>
+			window.onload = function(){
+				var img = document.getElementsByTagName('img')[0];
+				var viewH = document.documentElement.clientHeight;
+				var viewW = document.documentElement.clientWidth;
+				img.width = viewW;
+				img.height = viewH;
+				setInterval("window.location.href='main.html'",1200);
+			};
+		</script>
+	</body>
+</html>

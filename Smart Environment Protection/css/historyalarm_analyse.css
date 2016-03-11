@@ -36,3 +36,19 @@
 	color: #1B961B;
 }
 */
+/*-------模态窗口样式-----*/
+.g-align-left {
+	text-align: left;
+} 
+
+.g-align-center {
+	text-align: center;
+}
+
+.g-padding-left {
+	padding-left:1rem;
+}
+
+.g-btn-resize {
+	margin: 10px;
+}

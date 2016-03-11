@@ -5,6 +5,7 @@ window.onload = function() {
 		if( isNotNull(username) && isNotNull(pwd) ){
 			$.ajax({
 				type: "get",
+				timeout: 1000,
 				dataType: 'jsonp',
 				jsonp:'jsoncallback',
 				data: {username:username, password:hex_sha1(pwd)},
@@ -12,8 +13,7 @@ window.onload = function() {
 				async: false,
 				success: function(result) {
 					if(result.success == true){
-						alert('登陆成功');
-						window.location.href='main.html';
+						window.location.href='welcome.html';
 					}
 					else{
 						alert("用户名或密码错误");

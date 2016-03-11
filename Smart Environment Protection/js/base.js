@@ -15,6 +15,9 @@ $(document).on('click', 'html', function(e) {
 		}
 	}
 });
+
+$
+
 /*
 document.getElementsByTagName('html')[0].onclick = function(e) {
 	var nodeName = e.target.localName;
