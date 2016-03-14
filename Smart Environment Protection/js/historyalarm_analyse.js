@@ -27,10 +27,8 @@ $(function(){
 
 function checkData(){
 	var alarmtypeids = new Array();
-	$('.am-checkbox input').each(function(){
-		if($(this)[0].checked){
-			alarmtypeids.push($(this)[0].value);
-		}
+	$('.am-checkbox input:checked').each(function(){
+		alarmtypeids.push($(this)[0].value);
 	});	
 	if(alarmtypeids.length == 0){
 		alert('请选择告警类型');
@@ -64,7 +62,9 @@ function getAlarm(alarmtypeids, startTime, endTime) {
 		jsonp: 'jsoncallback',
 		data: {
 			alarmTypeIds: alarmtypeids,
-			pageNumber: getPageIndex()
+			pageNumber: getPageIndex(),
+			startTime: startTime,
+			endTime: endTime
 		},
 		url: "http://192.168.16.88:8080/SmartEnv/alarm/getAlarmPage",
 		async: false,
@@ -83,10 +83,13 @@ function getAlarm(alarmtypeids, startTime, endTime) {
 				var tr = GenTableRow(result.content[i]);
 				tr.appendTo(table);
 			}
+			setQueryTitle();
 			setPageInfo(result.number, result.totalPages);
+			$('#filter-modal').modal('close');
 		},
 		error: function(result) {
 			alert(result);
+			$('#filter-modal').modal('close');
 		}
 	});
 }
@@ -94,8 +97,9 @@ function getAlarm(alarmtypeids, startTime, endTime) {
 
 function GenTableRow(rowObj){
 	var tr=$("<tr></tr>");
-	var endtime = rowObj.endtime.month + '/' + rowObj.endtime.date;
-	var starttime = rowObj.starttime.month + '/' + rowObj.starttime.date;
+	var time = rowObj.endtime.toString();
+	var endtime = (rowObj.endtime.month + 1) + '/' + rowObj.endtime.date;
+	var starttime = (rowObj.starttime.month + 1) + '/' + rowObj.starttime.date;
 	var td=$("<td>"+ starttime + "-" + endtime + "</td>");
 	td.appendTo(tr);
 	td=$("<td>"+ rowObj.inputwater + "</td>");
@@ -124,5 +128,24 @@ function setPageInfo(index, totalPages){
 }
 
 function getPageIndex(){
-	return $('.am-pagination-select select')[0].selectedIndex;
+	var pageIndex = $('.am-pagination-select select')[0].selectedIndex;
+	if(pageIndex == -1){
+		return 0;
+	}
+	else{
+		return pageIndex;
+	}
+}
+
+function setQueryTitle(){
+	$('#alarm-type')[0].textContent = '';
+	$('#time-span')[0].textContent = '';
+	$('.am-checkbox input:checked').each(function(){
+		var text = $(this)[0].parentNode.textContent;
+		$('#alarm-type')[0].textContent = $('#alarm-type')[0].textContent + text + ' ';
+	});	
+	var beginTime = $('#start-time input')[0].value;
+	var endTime = $('#end-time input')[0].value;
+	$('#time-span')[0].textContent = beginTime + '至' + endTime;
+	
 }

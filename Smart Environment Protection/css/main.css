@@ -40,6 +40,7 @@ body {
 }
 
 .g-widget-list li a::after {
+	/*
 	display: inline-block;
 	font: normal normal normal 1.6rem/1 FontAwesome, sans-serif;
 	font-size: inherit;
@@ -53,6 +54,7 @@ body {
 	color: #ccc;
 	top: 50%;
 	margin-top: -8px;
+	*/
 }
 
 .g-widget-list li a h2 {
@@ -88,6 +90,7 @@ body {
 }
 
 .g-waring-list li a::after {
+	/*
 	display: inline-block;
 	font: normal normal normal 1.6rem/1 FontAwesome, sans-serif;
 	font-size: inherit;
@@ -101,6 +104,7 @@ body {
 	color: #ccc;
 	top: 50%;
 	margin-top: -8px;
+	*/
 }
 .g-waring-list li a div{
 	color: #000000;
