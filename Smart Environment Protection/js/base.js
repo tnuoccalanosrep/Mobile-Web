@@ -1,3 +1,4 @@
+/*
 $(document).on('click', 'html', function(e) {
 	var nodeName = e.target.localName;
 	var parentNodeName = '';
@@ -15,8 +16,7 @@ $(document).on('click', 'html', function(e) {
 		}
 	}
 });
-
-$
+*/
 
 /*
 document.getElementsByTagName('html')[0].onclick = function(e) {
@@ -53,7 +53,7 @@ function hasClass(obj, cls) {
   
 function addClass(obj, cls) {  
     if (!this.hasClass(obj, cls)) obj.className += " " + cls;  
-}  
+}
   
 function removeClass(obj, cls) {  
     if (hasClass(obj, cls)) {  
@@ -62,12 +62,12 @@ function removeClass(obj, cls) {
     }  
 }  
   
-function toggleClass(obj,cls){  
+function toggleClass(obj,cls){
     if(hasClass(obj,cls)){  
         removeClass(obj, cls);  
     }else{  
         addClass(obj, cls);  
-    }  
+    }
 }  
 
 function isNotNull(str) {

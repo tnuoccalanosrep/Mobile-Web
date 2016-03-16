@@ -1,4 +1,13 @@
 $(function(){
+	if(	$('#alarm-type')[0].textContent =='' &&
+	$('#time-span')[0].textContent ==''){
+		$('.am-modal').modal({
+			target: '#filter-modal',
+			closeViaDimmer: 1, 
+			width: 370, 
+			height:280
+		});
+	}
 	$('#btn-confirm')[0].onclick = function(e){
 		checkData();
 	}
@@ -47,12 +56,31 @@ function checkData(){
 	
 	var startTime = new Date(strstartTime.replace(/-/g,   "/"));
 	var endTime = new Date(strendTime.replace(/-/g,   "/"));
+	
+	startTime = initTime(startTime, 0);
+	endTime = initTime(endTime, 1);
+	
 	if(startTime > endTime){
 		alert('所选时间段无效，请重新选择');
 		return;
 	}
 	getAlarm(alarmtypeids, startTime, endTime);
 }
+
+function initTime(time, flag){
+	if(flag == 0){
+		time.setHours(0);
+		time.setMinutes(0);
+		time.setSeconds(0);
+	}
+	else{
+		time.setHours(23);
+		time.setMinutes(59);
+		time.setSeconds(59);
+	}
+	return time;
+}
+
 
 function getAlarm(alarmtypeids, startTime, endTime) {
 	$.ajax({
@@ -69,7 +97,7 @@ function getAlarm(alarmtypeids, startTime, endTime) {
 		url: "http://192.168.16.88:8080/SmartEnv/alarm/getAlarmPage",
 		async: false,
 		success: function(result) {
-			/*
+			/* explain:
 			 * result.content = List<Alarm>
 			 * result.number + 1= index
 			 * result.totalPages
@@ -121,6 +149,11 @@ function setPageInfo(index, totalPages){
 	pageSelect.innerHTML = '';
 	for(var i=0;i<totalPages;i++){
 		var pageinfo = (i+1) + '/' + totalPages;
+		var option = $('<option>'+ pageinfo +'</option>');
+		option.appendTo(pageSelect);
+	}
+	if(totalPages == 0){
+		var pageinfo = 0 + '/' + 0;
 		var option = $('<option>'+ pageinfo +'</option>');
 		option.appendTo(pageSelect);
 	}

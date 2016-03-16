@@ -1,4 +1,7 @@
 window.onload = function() {
+	$('button').popover({
+		content: '用户名或密码错误',
+	});
 	document.getElementsByTagName('button')[0].onclick = function(e) {
 		var username = document.getElementById('user').value;
 		var pwd = document.getElementById("pwd").value;
@@ -13,10 +16,12 @@ window.onload = function() {
 				async: false,
 				success: function(result) {
 					if(result.success == true){
-						window.location.href='welcome.html';
+						$('.am-popover').remove();
+						window.location.href='main.html';
 					}
 					else{
-						alert("用户名或密码错误");
+						$('button').popover('open');
+						setTimeout('$("button").popover("close")',2000);
 					}
 				},
 				error: function(data) {
