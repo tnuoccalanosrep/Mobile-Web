@@ -1,6 +1,6 @@
 /*--------顶部Nav样式-------*/
 #nav-header {
-	background-color:#5eb95e;
+	background-color:#3CA251;
 }
 
 /*----底部Nav的样式----*/
@@ -14,9 +14,9 @@
 }
 
 .am-navbar a:hover {
-	color: #1B961B;
+	color: #3CA251;
 }
 
 .g-selected span{
-	color: #1B961B;
+	color: #3CA251;
 }

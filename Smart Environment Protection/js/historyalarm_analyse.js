@@ -1,13 +1,26 @@
+var initPos;
+var Footer_initPos;
 $(function(){
-	if(	$('#alarm-type')[0].textContent =='' &&
-	$('#time-span')[0].textContent ==''){
-		$('.am-modal').modal({
-			target: '#filter-modal',
-			closeViaDimmer: 1, 
-			width: 370, 
-			height:280
-		});
-	}
+	initPos = $('#page-head').offset().top;
+	Footer_initPos = $('#page-footer').offset().top;
+	InitDate();
+	StickHeader();
+	StickPageFooter();
+	InitModal();
+	checkData();
+	RegEvent();
+});
+
+
+
+function InitDate(){
+	var date = new Date().toLocaleString();
+	$('#start-time').datepicker('setValue',date);
+	$('#end-time').datepicker('setValue',date);
+}
+
+
+function RegEvent(){
 	$('#btn-confirm')[0].onclick = function(e){
 		checkData();
 	}
@@ -31,8 +44,56 @@ $(function(){
 			checkData();
 		}
 	}
-	
-});
+}
+
+
+
+function StickHeader(){
+	$('#page-head').scrollspy({
+  	});
+  	
+	$('#page-head').on('outview.scrollspy.amui', function(){
+		$(this).addClass('g-stick-head');
+ 	});
+ 	$(window).scroll(function() {
+		var init_pos = $('#page-head').offset().top;
+		if(init_pos <= initPos){
+			$('#page-head').removeClass('g-stick-head');
+		}
+	});
+}
+
+function StickPageFooter(){
+	/*
+	$('#page-footer').scrollspy({
+  	});
+  	
+	$('#page-footer').on('outview.scrollspy.amui', function(){
+		//$(this).addClass('g-stick-footer');
+ 	});
+ 	$(window).scroll(function() {
+ 		console.log("InitPos_Top=" + Footer_initPos);
+ 		var absTop =  $('#page-footer').offset().top;
+ 		var absLeft =  $('#page-footer').offset().left;
+ 		var relTop = $('#page-footer').position().top;
+ 		var relLeft = $('#page-footer').position().left;
+ 		
+ 		console.log("absTop = " + absTop +" ,absLeft = " + absLeft + " ,relTop = "+ relTop + " ,relLeft = " + relLeft);
+		var current_pos = $('#page-footer').offset().bottom;
+		if(current_pos >= Footer_initPos){
+			//$('#page-footer').removeClass('g-stick-footer');
+		}
+	});
+	*/
+}
+function InitModal() {
+	$('.am-modal').modal({
+		target: '#filter-modal',
+		closeViaDimmer: 1,
+		width: 370,
+		height: 280
+	})
+}
 
 function checkData(){
 	var alarmtypeids = new Array();
@@ -95,7 +156,7 @@ function getAlarm(alarmtypeids, startTime, endTime) {
 			endTime: endTime
 		},
 		url: "http://192.168.16.88:8080/SmartEnv/alarm/getAlarmPage",
-		async: false,
+		async: true,
 		success: function(result) {
 			/* explain:
 			 * result.content = List<Alarm>
@@ -116,7 +177,6 @@ function getAlarm(alarmtypeids, startTime, endTime) {
 			$('#filter-modal').modal('close');
 		},
 		error: function(result) {
-			alert(result);
 			$('#filter-modal').modal('close');
 		}
 	});
@@ -142,6 +202,7 @@ function GenTableRow(rowObj){
 	td.appendTo(tr);
 	return tr;
 }
+
 
 
 function setPageInfo(index, totalPages){
@@ -182,3 +243,6 @@ function setQueryTitle(){
 	$('#time-span')[0].textContent = beginTime + '至' + endTime;
 	
 }
+
+
+

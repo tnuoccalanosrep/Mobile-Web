@@ -9,28 +9,24 @@
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="Cache-Control" content="no-siteapp" />
 		<link rel="stylesheet" href="css/amazeui.min.css" />
-		
 		<script src="js/jquery.js"></script>
 		<script src="js/amazeui.js"></script>
+		<script type="text/javascript" src="js/jqplot.js" ></script>
 		
 		<link rel="stylesheet" href="css/base.css" />
-		<link rel="stylesheet" href="css/monitor_video.css" />
-		<link rel="stylesheet" href="css/amazeui.slick.min.css" />
 		
-		<script type="text/javascript" src="js/base.js" ></script>
-		<script type="text/javascript" src="js/slick.js" ></script>
-		<script type="text/javascript" src="js/monitor_video.js" ></script>
-
+		<link rel="stylesheet" href="css/monitor_tendency.css" />
+		
 	</head>
 	<body>
-		<header data-am-widget="header" class="am-header am-header-default" id="nav-header">
+		<header data-am-widget="header" class="am-header am-header-default am-header-fixed" id="nav-header">
 	      	<div class="am-header-left am-header-nav">
 	          <a href="monitor.html" class="">
 				<img class="am-header-icon-custom" src="data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 12 20&quot;&gt;&lt;path d=&quot;M10,0l2,2l-8,8l8,8l-2,2L0,10L10,0z&quot; fill=&quot;%23fff&quot;/&gt;&lt;/svg&gt;" alt=""/>
 	          </a>
 	      	</div>
 	      	<h1 class="am-header-title">
-				实时监控
+				实时趋势
 	        </h1>
 	        <div class="am-header-right am-header-nav">
 	        	<a href="#right-link" class="">
@@ -40,22 +36,22 @@
 	        </div>
       	</header>
       	
-      	<div class="am-panel am-panel-default">
-			<ul class="slider center">
-				<li id="5871">设施#1</li>
-				<li id="6269">酸洗线/吊机#2</li>
-				<li id="5871">其他设备#3</li>
-				<li id="6269">我的设备#4</li>
-				<li>谁的设备#5</li>
-				<li>他的设备#6</li>
-			</ul>
-			<div class='video-field'>
-      			<video src="" controls="controls" autoplay="autoplay" preload="metadata" width="100%" height="280px">
-      				您的浏览器不支持video标签
-      			</video>
-      		</div>
-      		
-      	</div>
+      	<div id="chart1"></div>
+		<script type="text/javascript">
+			var data = [
+				[1, 2, 3, 4, 5, 6, 7, 8, 9],
+				[3, 6, 8, 1, 11, 22, 4, 21, 6]
+			];
+			var data_max = 30; //Y轴最大刻度
+			var line_title = ["A", "B"]; //曲线名称
+			var y_label = "这是Y轴"; //Y轴标题
+			var x_label = "这是X轴"; //X轴标题
+			var x = [1, 2, 3, 4, 5, 6, 7, 8, 9]; //定义X轴刻度值
+			var title = "这是标题"; //统计图标标题
+			j.jqplot.diagram.base("chart1", data, line_title, "这是统计标题", x, x_label, y_label, data_max, 1);
+			j.jqplot.diagram.base("chart2", data, line_title, "这是统计标题", x, x_label, y_label, data_max, 2);
+		</script>
+      	
 		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default nav-bottom" id="nav-bottom">
 			<ul class="am-navbar-nav am-cf am-avg-sm-4">
 				<li>
@@ -84,5 +80,6 @@
 				</li>
 			</ul>
   		</div>
+  		
 	</body>
 </html>

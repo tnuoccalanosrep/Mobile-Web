@@ -24,10 +24,32 @@ li {
 }
 .am-g div{
 	padding:2px;
-	color:#c4c4c4;
+	border:0px;
 }
+.am-g div ul{
+	font-size:14px;
+	display: none;
+	position:absolute; 
+	margin-top:5px; 
+	right:18px;
+	padding:5px;
+	background-color: #eee; 
+	color:#000;z-index: 1;
+}
+
+.am-g div li{
+	border-bottom: 1px solid #C4C4C4;
+	margin:5px;
+}
+
+.am-g div:hover ul{
+	display:block;
+}
+
+
 .am-g span {
 	margin-left: 5px;
+	color:#C4C4C4;
 }
 
 .histogram-footer {
@@ -39,7 +61,7 @@ li {
 .histogram-footer span {
 	padding:0 10px;
 	margin-right:5px;
-	background-color: darkorange;
+	background-color: #E78C55;
 }
 
 /*柱状图样式*/
@@ -53,7 +75,7 @@ li {
 }
 
 .histogram-bg-line {
-	border: #5eb95e solid;
+	border: #3CA251 solid;
 	border-width: 0 1px 2px 2px;
 	border-right-color: #eee;
 	overflow: hidden;
@@ -99,11 +121,15 @@ li {
 	position: relative;
 }
 
+
 .histogram-box {
 	position: relative;
 	display: inline-block;
 	height: 99.5%;
 	width: 20px;
+}
+.histogram-box a{
+	background: #e78c55;
 }
 
 .histogram-content li a {

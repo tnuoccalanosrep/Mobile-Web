@@ -25,14 +25,13 @@ body {
   -ms-transform: scale(1.08);
   -o-transform: scale(1.08);
   -webkit-transform: scale(1.08);
-  color: #5eb95e;
+  color: #3CA251;
   opacity: 1;
   transform: scale(1.08);
 }
 
 
 .video-field {
-	height: 180px;
-	border: 1px dashed darkmagenta;
 	margin-top:-20px;
+	height:280px;
 }

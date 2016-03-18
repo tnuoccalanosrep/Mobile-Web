@@ -144,7 +144,8 @@
 					"fonts/fontawesome-webfont.woff",
 					"css/amazeui.min.css",
 					"js/jquery.js",
-					"welcome.html"
+					"welcome.html",
+					"main.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -180,7 +181,10 @@
 					"main.html",
 					"monitor.html",
 					"historyalarm_analyse.html",
-					"report.html"
+					"report.html",
+					"js/more.js",
+					"envpro_info.html",
+					"login.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -192,7 +196,12 @@
 					"css/monitor.css",
 					"img/tick.png",
 					"more.html",
-					"main.html"
+					"main.html",
+					"monitor_video.html",
+					"img/dp_monitor.png",
+					"img/sp_monitor.png",
+					"report.html",
+					"login.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -226,7 +235,48 @@
 				"resources": [
 					"more.html",
 					"js/report.js",
-					"css/report.css"
+					"css/report.css",
+					"monitor.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"monitor_video.html": {
+				"resources": [
+					"js/base.js",
+					"js/monitor_video.js",
+					"js/slick.js",
+					"css/monitor_video.css",
+					"css/base.css",
+					"js/amazeui.js",
+					"fonts/fontawesome-webfont.woff",
+					"css/amazeui.min.css",
+					"css/amazeui.slick.min.css",
+					"js/jquery.js",
+					"monitor.html",
+					"main.html",
+					"js/video.js",
+					"js/videojs.hls.js",
+					"report.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"envpro_info.html": {
+				"resources": [
+					"js/slick.js",
+					"css/envpro_info.css",
+					"js/envpro_info.js",
+					"css/amazeui.slick.min.css",
+					"js/base.js",
+					"css/base.css",
+					"js/amazeui.js",
+					"fonts/fontawesome-webfont.woff",
+					"css/amazeui.min.css",
+					"js/jquery.js",
+					"more.html",
+					"monitor.html",
+					"report.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -235,7 +285,6 @@
 		"idle": {
 			"resources": [
 				"js/amazeui.widgets.helper.min.js",
-				"img/dp_monitor.png",
 				"css/amazeui.flat.min.css",
 				"base.html",
 				"fonts/fontawesome-webfont.ttf",
@@ -244,7 +293,6 @@
 				"fonts/FontAwesome.otf",
 				"fonts/fontawesome-webfont.eot",
 				"css/amazeui.flat.css",
-				"img/sp_monitor.png",
 				"fonts/fontawesome-webfont.svg",
 				"js/handlebars.min.js",
 				"js/app.js",

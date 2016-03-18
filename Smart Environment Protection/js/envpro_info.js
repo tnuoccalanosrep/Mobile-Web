@@ -19,5 +19,23 @@ $(function(){
 		$('#news-sort a.g-active').removeClass('g-active');
 		$(this).addClass('g-active');
 	});
+	setFirstTitle();
+	$('#slider-pic').flexslider({
+		directionNav: false,
+		pauseOnAction: false,
+		after:function(slider){
+			ChangeTitle();
+		},
+	});
 });
 
+
+function setFirstTitle(){
+	var alt = $('.am-slides li:eq(0) img').attr('alt');
+	$('#pic-title span').text(alt);
+}
+
+function ChangeTitle(){
+	var alt = $('.am-active-slide img').attr('alt');
+	$('#pic-title span').text(alt);
+}

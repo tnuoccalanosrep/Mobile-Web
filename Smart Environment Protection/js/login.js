@@ -1,10 +1,9 @@
 window.onload = function() {
-	$('button').popover({
-		content: '用户名或密码错误',
-	});
-	document.getElementsByTagName('button')[0].onclick = function(e) {
-		var username = document.getElementById('user').value;
-		var pwd = document.getElementById("pwd").value;
+	var ani_shake = 'am-animation-shake';
+	$('button')[0].onclick = function(e) {
+		RemoveAnimation();
+		var username = $('#user input')[0].value;
+		var pwd = $("#pwd input")[0].value;
 		if( isNotNull(username) && isNotNull(pwd) ){
 			$.ajax({
 				type: "get",
@@ -16,12 +15,10 @@ window.onload = function() {
 				async: false,
 				success: function(result) {
 					if(result.success == true){
-						$('.am-popover').remove();
 						window.location.href='main.html';
 					}
 					else{
-						$('button').popover('open');
-						setTimeout('$("button").popover("close")',2000);
+						$('button').addClass(ani_shake);
 					}
 				},
 				error: function(data) {
@@ -30,22 +27,26 @@ window.onload = function() {
 			});
 		}
 		else {
-			var obj = $('#user')[0];
+			var obj = $('#user input')[0];
 			if( !isNotNull(username)){
 				obj.placeholder = '请输入用户名';
-				addClass(obj.parentNode, 'am-form-warning');
+				//addClass(obj.parentNode, 'am-form-warning');
+				//addClass(obj.parentNode, ani_shake);
+				$('#user').addClass('am-form-warning');
+				$('#user').addClass(ani_shake);
 			}
 			
-			obj = $('#pwd')[0];
+			obj = $('#pwd input')[0];
 			if( !isNotNull(pwd)){
 				obj.placeholder = '请输入密码';
-				addClass(obj.parentNode, 'am-form-warning');
+				$('#pwd').addClass('am-form-warning');
+				$('#pwd').addClass(ani_shake);
 			}
 			return;
 		}
 	};
 	
-
+	/*
 	document.getElementById('user').onfocus = function(e) {
 		removeClass(this.parentNode, 'am-form-warning');
 	};
@@ -67,9 +68,40 @@ window.onload = function() {
 			addClass(this.parentNode, 'am-form-warning');
 		}
 	};
+	*/
+	$('#user input')[0].onfocus = function(e){
+		$('#user').removeClass('am-form-warning');
+		$('#user').removeClass('am-animation-shake');
+	}
+	
+	$('#pwd input')[0].onfocus = function(e){
+		$('#pwd').removeClass('am-form-warning');
+		$('#pwd').removeClass('am-animation-shake');
+	}
+	
+	$('#user input')[0].onblur = function(e) {
+		if(this.value == ''){
+			this.placeholder = '请输入用户名';
+			$('#user').addClass('am-form-warning');
+			$('#user').addClass('am-animation-shake');
+		}
+	};
+	
+	$('#pwd input')[0].onblur = function(e) {
+		if(this.value == ''){
+			this.placeholder = '请输入密码';
+			$('#pwd').addClass('am-form-warning');
+			$('#pwd').addClass('am-animation-shake');
+		}
+	};
+	
 };
 
-
-
+function RemoveAnimation(){
+	var ani_shake = 'am-animation-shake';
+	$('button').removeClass(ani_shake);
+	$('#user').removeClass(ani_shake);
+	$('#pwd').removeClass(ani_shake);
+}
 
 

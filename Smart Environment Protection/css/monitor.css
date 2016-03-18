@@ -42,16 +42,16 @@ body {
 }
 
 .am-u-sm-4 a{
-	color:#5eb95e;
+	color:#3CA251;
 	background-color: #fff;
-	border-color: #5eb95e;
+	border-color: #3CA251;
 	-webkit-transition: none;
 	transition: none;
 	padding: 5px;
 }
 .am-u-sm-4 a:hover{
 	color:#fff;
-	background-color: #5eb95e;
+	background-color: #3CA251;
 }
 
 span.g-water-used {
