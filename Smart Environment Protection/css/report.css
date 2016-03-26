@@ -29,10 +29,8 @@ li {
 .am-g div ul{
 	font-size:14px;
 	display: none;
-	position:absolute; 
-	margin-top:5px; 
+	position:absolute;
 	right:18px;
-	padding:5px;
 	background-color: #eee; 
 	color:#000;z-index: 1;
 }

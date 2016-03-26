@@ -10,7 +10,8 @@
 			"css/amazeui.min.css",
 			"js/jquery.js",
 			"welcome.html",
-			"main.html"
+			"main.html",
+			"js/hammer.js"
 		],
 		"refer": [
 			"welcome.html",
@@ -36,7 +37,8 @@
 			"img/f-best.png",
 			"img/f-medium.png",
 			"login.html",
-			"report.html"
+			"report.html",
+			"js/hammer.js"
 		],
 		"refer": [
 			"more.html",
@@ -55,7 +57,8 @@
 			"report.html",
 			"js/more.js",
 			"envpro_info.html",
-			"login.html"
+			"login.html",
+			"js/hammer.js"
 		],
 		"refer": [
 			"historyalarm_analyse.html",
@@ -78,7 +81,9 @@
 			"img/dp_monitor.png",
 			"img/sp_monitor.png",
 			"report.html",
-			"login.html"
+			"login.html",
+			"monitor_tendency.html",
+			"js/hammer.js"
 		],
 		"refer": [
 			"more.html",
@@ -99,11 +104,14 @@
 			"css/amazeui.min.css",
 			"js/jquery.js",
 			"monitor.html",
-			"js/historyalarm_analyse.js"
+			"js/historyalarm_analyse.js",
+			"js/hammer.js",
+			"more.html"
 		],
 		"refer": [
 			"main.html",
-			"monitor.html"
+			"monitor.html",
+			"more.html"
 		]
 	},
 	"welcome.html": {
@@ -121,7 +129,8 @@
 			"more.html",
 			"js/report.js",
 			"css/report.css",
-			"monitor.html"
+			"monitor.html",
+			"js/hammer.js"
 		],
 		"refer": [
 			"more.html",
@@ -144,7 +153,8 @@
 			"main.html",
 			"js/video.js",
 			"js/videojs.hls.js",
-			"report.html"
+			"report.html",
+			"js/hammer.js"
 		],
 		"refer": [
 			"monitor.html",
@@ -166,12 +176,29 @@
 			"js/jquery.js",
 			"more.html",
 			"monitor.html",
-			"report.html"
+			"report.html",
+			"js/hammer.js",
+			"img/pic_1.jpg",
+			"img/pic_hasky.jpg",
+			"img/pic_3.jpg",
+			"img/pic_dog.jpg",
+			"img/pic_hapa.jpg",
+			"img/pic_4.jpg",
+			"img/pic_2.jpg"
 		],
 		"refer": [
 			"more.html",
 			"monitor.html",
 			"report.html"
 		]
+	},
+	"monitor_tendency.html": {
+		"resources": [
+			"css/monitor_tendency.css",
+			"js/highcharts.js",
+			"js/monitor_tendency.js",
+			"main.html"
+		],
+		"refer": []
 	}
 }

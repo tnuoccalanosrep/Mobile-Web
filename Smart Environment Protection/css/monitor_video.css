@@ -31,7 +31,6 @@ body {
 }
 
 
-.video-field {
-	margin-top:-20px;
+.video-field, video{
 	height:280px;
 }

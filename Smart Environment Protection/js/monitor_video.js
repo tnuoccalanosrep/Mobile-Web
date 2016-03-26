@@ -7,13 +7,13 @@ window.onload = function(){
 	centerPadding: '0px',
 	slidesToShow: 3,
 	});
+	/*
 	var deviceid = $('.center').find('li:eq(0)').attr('ID');
 	if(isNotNull(deviceid)){
 		getRealtimeVideo(deviceid);
 	}
-
-	
-	
+	*/
+	/*
 	$('.center').on('beforeChange', function(event,slick,currentSlide){
 	  	pauseVideo();
 	});
@@ -26,6 +26,7 @@ window.onload = function(){
 	  		getRealtimeVideo(deviceid);
 	  	}
 	});
+	*/
 };
 
 function getRealtimeVideo(deviceid) {
