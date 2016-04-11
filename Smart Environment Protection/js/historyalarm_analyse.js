@@ -4,7 +4,7 @@ $(function(){
 	InitDate();
 	StickHeader();
 	InitModal();
-	checkData();
+	//checkData();
 	RegEvent();
 	
 });
@@ -129,7 +129,7 @@ function getAlarm(alarmtypeids, startTime, endTime) {
 			startTime: startTime,
 			endTime: endTime
 		},
-		url: "http://192.168.16.88:8080/SmartEnv/alarm/getAlarmPage",
+		url: "http://183.62.9.189:8270/SmartEnv/alarm/getAlarmPage",
 		async: true,
 		success: function(result) {
 			/* explain:

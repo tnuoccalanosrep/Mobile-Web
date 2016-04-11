@@ -16,6 +16,7 @@
 		
 		<link rel="stylesheet" href="css/monitor_tendency.css" />
 		
+		<script type="text/javascript" src="js/base.js" ></script>
 		<script type="text/javascript" src="js/highcharts.js" ></script>
 		<script type="text/javascript" src="js/monitor_tendency.js" ></script>
 		
@@ -34,12 +35,31 @@
 	        <div class="am-header-right am-header-nav">
 	        	<a href="#right-link" class="">
 	        		<span class="am-icon-bell am-icon-sm">
-	        		<span class="am-badge am-badge-danger am-round haunle">5</span>
+	        		<span class="am-badge am-badge-danger am-round haunle"></span>
 	        	</a>
 	        </div>
       	</header>
       	
-      	<div id="container" style="height:400px;margin:0 auto;"></div>
+      	<div id="normal-chart" style="padding:10px 0">
+      		<!--
+      		<div id="container" style="height:450px;margin:20px auto;"></div>
+      		-->
+      	</div>
+		<div data-am-widget="tabs" class="am-tabs am-tabs-default" id="tabs-chart" style="display:none">
+			<ul class="am-tabs-nav am-cf">
+				<li class="am-active"><a href="[data-tab-panel-0]">pH值</a></li>
+				<li class=""><a href="[data-tab-panel-1]">排放量</a></li>
+			</ul>
+			<div class="am-tabs-bd">
+				<div data-tab-panel-0 class="am-tab-panel am-active">
+					
+				</div>
+				<div data-tab-panel-1 class="am-tab-panel ">
+					
+				</div>
+			</div>
+		</div>
+
       	
       	
 		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default nav-bottom" id="nav-bottom">

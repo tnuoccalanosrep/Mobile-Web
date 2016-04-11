@@ -38,7 +38,8 @@
 			"img/f-medium.png",
 			"login.html",
 			"report.html",
-			"js/hammer.js"
+			"js/hammer.js",
+			"js/main.js"
 		],
 		"refer": [
 			"more.html",
@@ -58,7 +59,10 @@
 			"js/more.js",
 			"envpro_info.html",
 			"login.html",
-			"js/hammer.js"
+			"js/hammer.js",
+			"img/admin1.png",
+			"more.html",
+			"about.html"
 		],
 		"refer": [
 			"historyalarm_analyse.html",
@@ -66,7 +70,9 @@
 			"report.html",
 			"envpro_info.html",
 			"main.html",
-			"login.html"
+			"login.html",
+			"more.html",
+			"about.html"
 		]
 	},
 	"monitor.html": {
@@ -83,14 +89,16 @@
 			"report.html",
 			"login.html",
 			"monitor_tendency.html",
-			"js/hammer.js"
+			"js/hammer.js",
+			"js/monitor.js"
 		],
 		"refer": [
 			"more.html",
 			"main.html",
 			"monitor_video.html",
 			"report.html",
-			"login.html"
+			"login.html",
+			"monitor_tendency.html"
 		]
 	},
 	"historyalarm_analyse.html": {
@@ -197,8 +205,23 @@
 			"css/monitor_tendency.css",
 			"js/highcharts.js",
 			"js/monitor_tendency.js",
-			"main.html"
+			"main.html",
+			"js/hammer.js",
+			"report.html",
+			"monitor.html"
 		],
-		"refer": []
+		"refer": [
+			"report.html",
+			"monitor.html"
+		]
+	},
+	"about.html": {
+		"resources": [
+			"res/about.jpg",
+			"more.html"
+		],
+		"refer": [
+			"more.html"
+		]
 	}
 }

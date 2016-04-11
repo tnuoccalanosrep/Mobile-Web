@@ -7,13 +7,12 @@ window.onload = function(){
 	centerPadding: '0px',
 	slidesToShow: 3,
 	});
-	/*
+	
 	var deviceid = $('.center').find('li:eq(0)').attr('ID');
 	if(isNotNull(deviceid)){
 		getRealtimeVideo(deviceid);
 	}
-	*/
-	/*
+	
 	$('.center').on('beforeChange', function(event,slick,currentSlide){
 	  	pauseVideo();
 	});
@@ -26,7 +25,7 @@ window.onload = function(){
 	  		getRealtimeVideo(deviceid);
 	  	}
 	});
-	*/
+	
 };
 
 function getRealtimeVideo(deviceid) {
@@ -38,13 +37,14 @@ function getRealtimeVideo(deviceid) {
 		data: {
 			deviceid: deviceid
 		},
-		url: "http://192.168.16.88:8080/SmartEnv/video/getRealtimeVideo",
+		url: "http://183.62.9.189:8270/SmartEnv/video/getRealtimeVideo",
 		async: false,
 		success: function(result) {
 			if (isNotNull(result.url)) {
 				setVideoUrl(result.url);
-			} else {
-				alert(result.err);
+			} 
+			else {
+				
 			}
 		},
 		error: function(result) {

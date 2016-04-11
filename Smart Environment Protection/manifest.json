@@ -58,7 +58,7 @@
                 "keystore": "",/*Android应用打包使用的密钥库文件*/
                 "password": "",/*Android应用打包使用密钥库中证书的密码*/
                 "aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
-               "permissions": []
+               "permissions": ["<uses-permission android:name=\"android.permission.INJECT_EVENTS\"/>"]
 				/*使用Native.js调用原生安卓API需要使用到的系统权限*/
             },
             "orientation": [
@@ -171,7 +171,8 @@
 					"img/f-medium.png",
 					"login.html",
 					"report.html",
-					"js/hammer.js"
+					"js/hammer.js",
+					"js/main.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -187,7 +188,10 @@
 					"js/more.js",
 					"envpro_info.html",
 					"login.html",
-					"js/hammer.js"
+					"js/hammer.js",
+					"img/admin1.png",
+					"more.html",
+					"about.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -206,7 +210,8 @@
 					"report.html",
 					"login.html",
 					"monitor_tendency.html",
-					"js/hammer.js"
+					"js/hammer.js",
+					"js/monitor.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -303,7 +308,18 @@
 					"css/monitor_tendency.css",
 					"js/highcharts.js",
 					"js/monitor_tendency.js",
-					"main.html"
+					"main.html",
+					"js/hammer.js",
+					"report.html",
+					"monitor.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"about.html": {
+				"resources": [
+					"res/about.jpg",
+					"more.html"
 				],
 				"refer": [],
 				"priority": 0

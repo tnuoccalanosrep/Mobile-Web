@@ -24,7 +24,7 @@
 	<body>
 		<header data-am-widget="header" class="am-header am-header-default am-header-fixed" id="nav-header">
 	      	<div class="am-header-left am-header-nav">
-	          <a class="" id="btn-back">
+	          <a class="" id="btn-back" data-state="0">
 				<img class="am-header-icon-custom" src="data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 12 20&quot;&gt;&lt;path d=&quot;M10,0l2,2l-8,8l8,8l-2,2L0,10L10,0z&quot; fill=&quot;%23fff&quot;/&gt;&lt;/svg&gt;" alt=""/>
 	          </a>
 	      	</div>
@@ -34,7 +34,7 @@
 			<div class="am-header-right am-header-nav">
 	        	<a href="#right-link" class="">
 	        		<span class="am-icon-bell am-icon-sm">
-	        		<span class="am-badge am-badge-danger am-round haunle">5</span>
+	        		<span class="am-badge am-badge-danger am-round haunle"></span>
 	        	</a>
 	        </div>
       	</header>
@@ -43,88 +43,88 @@
 			<div data-am-widget="list_news" class="am-list-news am-list-news-default">
 				<!--列表标题-->
 				<div class="am-list-news-hd am-cf">
-					<!--带更多链接-->
-						<!--
-						<h2>左图 + 摘要</h2>
-						<span class="am-list-news-more am-fr">更多 &raquo;</span>
-						-->
 					<div id="news-sort" class="am-g am-g-fixed">
-						<a class="am-u-sm-3">新闻发布</a>
+						<a class="am-u-sm-3 g-active">新闻发布</a>
 						<a class="am-u-sm-3">政府文件</a>
 						<a class="am-u-sm-3">环保新闻</a>
 						<a class="am-u-sm-3">图说环保</a>
-						<!--
-						<i class="am-icon-chevron-down"></i>
-                        -->
 					</div>
-					
-					<div class="am-slider am-slider-a4" id='slider-pic'>
-						<ul class="am-slides">
-							<li>
-								<img src="img/pic_1.jpg" alt="北京一饭店为了尽早打烊冬天开冷风轰客">
-							</li>
-							<li>
-								<img src="img/pic_2.jpg" alt="海南一老板白天发工资,晚上派人去抢回来">
-							</li>
-							<li>
-								<img src="img/pic_3.jpg" alt="偷到山寨苹果手机嫌丑，塞回失主口袋时被抓">
-							</li>
-							<li>
-								<img src="img/pic_4.jpg" alt="香港明星风水师广东冒雨看墓园被山泥活埋">
-							</li>
-						</ul>
-						<div id="pic-title"><i class="am-icon-image"></i><span></span></div>
+					<div id="slider-wrapper">
+						<div class="am-slider am-slider-a4" id='slider-pic'>
+	                        <ul class="am-slides">
+	                        	<!--
+	                            <li>
+									<a data-url="newsdelivery_banner_1.html"><img src="img/pic_1.jpg" alt="世界气象日 各地奇异天象大搜罗"/></a>
+								</li>
+								<li>
+									<a data-url="newsdelivery_banner_1.html"><img src="img/pic_2.jpg" alt="环保部去年受理举报,大气污染居首"/></a>
+								</li>
+								<li>
+									<a data-url="newsdelivery_banner_1.html"><img src="img/pic_3.jpg" alt="垃圾污染上游来 母亲河之痛谁来治"/></a>
+								</li>
+								<li>
+									<a data-url="newsdelivery_banner_1.html"><img src="img/pic_4.jpg" alt="南水北调中线干线完成首次突发水污染应急演练"></a>
+								</li>
+	                           -->
+							</ul>
+							<!--
+	                        	<div id="pic-title"><i class="am-icon-image"></i><span></span></div>
+	                        -->
+						</div>
 					</div>
 				</div>
 			
 				<div class="am-list-news-bd">
 					<ul class="am-list" id="news-list">
 						<!--缩略图在标题左边-->
+						<!--
+                        	
+                       
 						<li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
 							<div class="am-u-sm-4 am-list-thumb">
-								<a data-url="envpro_detail_1.html" class="">
-									<img src="img/pic_dog.jpg" alt="我很囧，你保重....晒晒旅行中的那些囧！" />
+								<a data-url="nvpro_newsdelivery_1.html" class="">
+									<img src="img/pic_dog.jpg" alt="被污染改变的生活：患癌人数增多" />
 								</a>
 							</div>
 			
-							<div class=" am-u-sm-8 am-list-main">
-								<h3 class="am-list-item-hd"><a data-url="envpro_detail_1.html" class="">我很囧，你保重....晒晒旅行中的那些囧！</a></h3>
+							<div class="am-u-sm-8 am-list-main">
+								<h3 class="am-list-item-hd"><a data-url="envpro_newsdelivery_1.html">被污染改变的生活：患癌人数增多</a></h3>
 			
-								<div class="am-list-item-text">囧人囧事囧照，人在囧途，越囧越萌。标记《带你出发，陪我回家》http://book.douban.com/subject/25711202/为“想读”“在读”或“读过”，有机会获得此书本活动进行3个月，每月送出三本书。会有不定期bonus！</div>
+								<div class="am-list-item-text">徐州市利国镇马山村被徐州钢铁集团（东南钢铁厂）、牛头山钢铁厂包围，几分钟一次冒出的黄色烟尘随风飘入村庄。古时，这里因炼铁利国利民，得名“利国”；</div>
 			
 							</div>
 						</li>
 						<li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
 							<div class="am-u-sm-4 am-list-thumb">
-								<a data-url="envpro_detail_1.html" class="">
-									<img src="img/pic_hapa.jpg" alt="我最喜欢的一张画" />
+								<a data-url="envpro_newsdelivery_2.html" class="">
+									<img src="img/pic_hapa.jpg" alt="哈尔滨环保进入智慧时代" />
 								</a>
 							</div>
 			
-							<div class=" am-u-sm-8 am-list-main">
-								<h3 class="am-list-item-hd"><a data-url="envpro_detail_1.html" class="">我最喜欢的一张画</a></h3>
+							<div class="am-u-sm-8 am-list-main">
+								<h3 class="am-list-item-hd"><a data-url="envpro_newsdelivery_2.html" class="">哈尔滨环保进入智慧时代</a></h3>
 			
-								<div class="am-list-item-text">你最喜欢的艺术作品，告诉大家它们的------名图画，色彩，交织，撞色，线条雕塑装置当代古代现代作品的照片美我最喜欢的画群296795413进群发画，少说多发图，</div>
+								<div class="am-list-item-text">经过前期调研、软件研发、调试、试运行等一系列工作，近日，哈尔滨市燃煤锅炉管理系统正式上线运行。作为哈市正在打造的“智慧环保”中的一个项目，该系统可以对全市近2800台锅炉进行统计、分析、查询。</div>
 			
 							</div>
 						</li>
 						<li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
 							<div class="am-u-sm-4 am-list-thumb">
-								<a data-url="envpro_detail_1.html" class="">
-									<img src="img/pic_hasky.jpg" alt="我最喜欢的一张画" />
+								<a data-url="envpro_newsdelivery_3.html" class="">
+									<img src="img/pic_hasky.jpg" alt="绿色环保？未来冰葬或取代火葬" />
 								</a>
 							</div>
 			
 							<div class=" am-u-sm-8 am-list-main">
-								<h3 class="am-list-item-hd"><a data-url="envpro_detail_1.html" class="">我最喜欢的一张画</a></h3>
+								<h3 class="am-list-item-hd"><a data-url="envpro_newsdelivery_3.html" class="">绿色环保？未来冰葬或取代火葬</a></h3>
 			
-								<div class="am-list-item-text">你最喜欢的艺术作品，告诉大家它们的------名图画，色彩，交织，撞色，线条雕塑装置当代古代现代作品的照片美我最喜欢的画群296795413进群发画，少说多发图，</div>
+								<div class="am-list-item-text">　人都难免一死，对过世的亲人遗体的妥善安葬，寄托着生者对逝者的深厚情谊。随着人类生生不息的繁衍，传统的土葬因占用的土地面积较多而在许多国家受到了严格的限制。火葬则因为存在污染环境的负面作用而被舆论所病诟。随着科技的发展，一种被认为是最环保的绿色殡葬方式出现了，这就是冰葬。</div>
 			
 							</div>
 						</li>
+						 -->
 					</ul>
 				</div>
-			
 			</div>
        	</div>
        	

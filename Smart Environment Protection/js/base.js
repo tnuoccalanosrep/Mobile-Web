@@ -19,14 +19,46 @@ $(document).on('click', 'html', function(e) {
 */
 
 $(function(){
+	
+	var filter = [	'monitor_video.html',
+					'envpro_info.html',
+					'historyalarm_analyse.html',
+					'monitor_tendency.html'
+				]
+	
+	
 	$("<script type=\"text/javascript\" src=\"js/hammer.js\"><\/script>").appendTo($('head'));
 	addBodyClass();
+	BindBackBtnEvent();
 	var dirArray = document.URL.split('/');
 	var pageName = dirArray[dirArray.length - 1];
-	if(pageName != 'monitor_video.html' && pageName != 'envpro_info.html' && pageName != 'historyalarm_analyse.html'){
-		addSwipeEvent();	
+	
+	for(var i = 0 ; i < filter.length; ++i) {
+		var pageName = filter[i];
+		if(document.URL.indexOf(pageName) > -1){
+			return;
+		}
+	}
+	addSwipeEvent();
+	if(window.plus){
+		addBackBtnEvent();
+	}else{
+		document.addEventListener("plusready",addBackBtnEvent,false);
 	}
 });
+
+function addBackBtnEvent(){
+	plus.key.addEventListener("backbutton",function(){
+		var r = confirm( "确定退出程序？" );
+		if(!r){
+			return;
+		}
+		else{
+			var ws=plus.webview.currentWebview();
+			plus.webview.close(ws);
+		}
+	});
+}
 
 /*
 document.getElementsByTagName('html')[0].onclick = function(e) {
@@ -90,6 +122,20 @@ function isFunctionNode(nodeName){
 		return true;
 	}
 }
+
+function BindBackBtnEvent(){
+	$('#btn-back').on('click', function(e){
+		var state = $('#btn-back').attr('data-state');
+		var pageName = getPageName(document.URL);
+		if(pageName != 'envpro_info.html' && pageName != 'more.html'){
+			var lastPageName = getPageName(document.referrer);
+			if(lastPageName != 'login.html'){
+				history.go(-1);
+			}
+		}
+		
+	});
+}
 /*
 function hasClass(obj, cls) {  
     return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));  
@@ -127,3 +173,23 @@ function getPageName(url){
 		return '';
 	}
 }
+
+
+function getParamValue(strParams, paramName){
+	var params = strParams.split('&');
+	for(var i = 0; i < params.length; i++){
+		var key = isNotNull(params[i].split('=')[0]) ? params[i].split('=')[0] : '';
+		if(key == paramName){
+			var value = isNotNull(params[i].split('=')[1]) ? params[i].split('=')[1] : '';
+			return value;
+		}
+	}
+}
+
+function random(min, max){
+	min = Number(min);
+	max = Number(max);
+	return Math.floor(min + Math.random() * (max - min));
+}
+
+

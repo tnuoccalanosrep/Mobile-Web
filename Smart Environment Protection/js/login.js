@@ -11,7 +11,7 @@ window.onload = function() {
 				dataType: 'jsonp',
 				jsonp:'jsoncallback',
 				data: {username:username, password:hex_sha1(pwd)},
-				url: "http://183.62.9.187:80/SmartEnv/user/checkUser",
+				url: "http://183.62.9.189:8270/SmartEnv/user/checkUser",
 				async: false,
 				success: function(result) {
 					if(result.success == true){

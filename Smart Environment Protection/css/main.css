@@ -4,7 +4,7 @@ body {
 }
 
 .am-panel {
-	margin-top: 10px;
+	margin-top: 12px;
 }
 /*
 #nav-header {
@@ -62,7 +62,8 @@ body {
 }
 
 .g-widget-list li a span {
-	margin-left: 40px;
+	position: absolute;
+	right: 40px;
 	font-size: 25px;
 	color: #4AAA4A;
 }
@@ -76,6 +77,13 @@ body {
 	width:50px;
 	margin-bottom: 2px;
 }
+/*
+ * 第二个面板的样式
+ */
+.g-second-panel {
+	margin-top: -10px;
+}
+
 
 /*--------告警list的样式---------*/
 .g-waring-list li a {

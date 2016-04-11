@@ -23,7 +23,7 @@
 	<body>
 		<header data-am-widget="header" class="am-header am-header-default am-header-fixed" id="nav-header">
 			<div class="am-header-left am-header-nav">
-				<a href="login.html" class="">
+				<a id="btn-back" class="">
 					<img class="am-header-icon-custom" src="data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 12 20&quot;&gt;&lt;path d=&quot;M10,0l2,2l-8,8l8,8l-2,2L0,10L10,0z&quot; fill=&quot;%23fff&quot;/&gt;&lt;/svg&gt;"
 					alt="" />
 				</a>
@@ -36,36 +36,41 @@
 	        </div>
       	</header>
 		<div id="content">
-			<div class="am-g">
-				<div class="am-u-sm-3">产污<span class="am-icon-caret-down" />
+			<div class="am-g g-selector">
+				<div class="am-u-sm-3">
+					<span class="g-option">产污监控</span>
+					<span class="am-icon-caret-down g-icon-right"></span>
 					<ul>
-						<li>产污源1</li>
-						<li>产污源2</li>
-						<li>产污源3</li>
-						<li>产污源4</li>
+						<li>产污监控</li>
+						<li>排污监控</li>
+						<li>治污监控</li>
 					</ul>
 				</div>
-				<div class="am-u-sm-3">监控点<span class="am-icon-caret-down" />
+				<div class="am-u-sm-3">
+					<span class="g-option">监控点1</span>
+					<span class="am-icon-caret-down g-icon-right"></span>
 					<ul>
 						<li>监控点1</li>
 						<li>监控点2</li>
 						<li>监控点3</li>
 					</ul>
 				</div>
-				<div class="am-u-sm-3">监测因子<span class="am-icon-caret-down" />
+				<div class="am-u-sm-3">
+					<span class="g-option">pH值</span>
+					<span class="am-icon-caret-down g-icon-right"></span>
 					<ul>
-						<li>监测因子1</li>
-						<li>监测因子2</li>
-						<li>监测因子3</li>
-						<li>监测因子4</li>
+						<li>pH值</li>
+						<li>流量</li>
 					</ul>
 				</div>
-				<div class="am-u-sm-3">周期<span class="am-icon-caret-down" />
+				<div class="am-u-sm-3">
+					<span class="g-option">日平均</span>
+					<span class="am-icon-caret-down g-icon-right"></span>
 					<ul>
-						<li>月</li>
-						<li>周</li>
-						<li>天</li>
-						<li>小时</li>
+						<li>月平均</li>
+						<li>周平均</li>
+						<li>日平均</li>
+						<li>时平均</li>
 					</ul>
 				</div>
 			</div>
@@ -94,26 +99,6 @@
 						<li>
 							<div></div>
 						</li>
-					</ul>
-					<ul>
-						<li>
-							<div></div>
-						</li>
-						<li>
-							<div></div>
-						</li>
-						<li>
-							<div></div>
-						</li>
-						<li>
-							<div></div>
-						</li>
-						<li>
-							<div></div>
-						</li>
-						<li>
-							<div></div>
-						</li>
 						<li>
 							<div></div>
 						</li>
@@ -140,31 +125,14 @@
 						<li>
 							<div></div>
 						</li>
-					</ul>
-					<ul>
-						<li>
-							<div></div>
-						</li>
-						<li>
-							<div></div>
-						</li>
-						<li>
-							<div></div>
-						</li>
-						<li>
-							<div></div>
-						</li>
-						<li>
-							<div></div>
-						</li>
-						<li>
-							<div></div>
-						</li>
 						<li>
 							<div></div>
 						</li>
 					</ul>
 					<ul>
+						<li>
+							<div></div>
+						</li>
 						<li>
 							<div></div>
 						</li>
@@ -285,81 +253,69 @@
 					<ul>
 						<li>
 							<span class="histogram-box">
-									<a title="35%" data-percent=44%></a>
-								</span>
+								<a title="35%" data-percent=44%></a>
+							</span>
 							<span class="name">3</span>
 						</li>
 						<li>
 							<span class="histogram-box">
-									<a title="40%" data-percent=58%></a>
-								</span>
+								<a title="40%" data-percent=58%></a>
+							</span>
 							<span class="name">6</span>
 						</li>
 						<li>
 							<span class="histogram-box">
-									<a title="50%" data-percent=62%></a>
-								</span>
+								<a title="50%" data-percent=62%></a>
+							</span>
 							<span class="name">9</span>
 						</li>
 						<li>
 							<span class="histogram-box">
-									<a title="80%" data-percent=72%></a>
-								</span>
+								<a title="80%" data-percent=72%></a>
+							</span>
 							<span class="name">12</span>
 						</li>
 						<li>
 							<span class="histogram-box">
-									<a title="80%" data-percent=67%></a>
-								</span>
+								<a title="80%" data-percent=67%></a>
+							</span>
 							<span class="name">15</span>
 						</li>
 						<li>
 							<span class="histogram-box">
-									<a title="80%" data-percent=84%></a>
-								</span>
+								<a title="80%" data-percent=84%></a>
+							</span>
 							<span class="name">18</span>
 						</li>
 						<li>
 							<span class="histogram-box">
-									<a title="80%" data-percent=77%></a>
-								</span>
+								<a title="80%" data-percent=77%></a>
+							</span>
 							<span class="name">21</span>
 						</li>
 						<li>
 							<span class="histogram-box">
-									<a title="80%" data-percent=59%></a>
-								</span>
+								<a title="80%" data-percent=59%></a>
+							</span>
 							<span class="name">24</span>
 						</li>
 					</ul>
 				</div>
 				<!--百分比 y轴-->
 				<div class="histogram-y">
-					<!--
-							                <ul>
-												<li>100%</li>
-												<li>80%</li>
-												<li>60%</li>
-												<li>40%</li>
-												<li>20%</li>
-												<li>0%</li>
-											</ul>
-							                -->
 					<ul>
-						<li>22.5</li>
-						<li>20</li>
-						<li>17.5</li>
-						<li>15</li>
-						<li>12.5</li>
+						<li>14</li>
+						<li>12</li>
 						<li>10</li>
-						<li>7.5</li>
-						<li>5</li>
-						<li>2.5</li>
+						<li>8</li>
+						<li>6</li>
+						<li>4</li>
+						<li>2</li>
 						<li>0</li>
 					</ul>
 				</div>
 			</div>
-			<div class="histogram-footer"><span>&nbsp;</span>SO2值</div>
+			<div class="histogram-footer"><span>&nbsp;</span>pH值</div>
 		</div>
 		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default nav-bottom" id="nav-bottom">
 			<ul class="am-navbar-nav am-cf am-avg-sm-4">

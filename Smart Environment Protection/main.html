@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<meta name="format-detection" content="telephone=no">
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -17,11 +17,12 @@
 		<script src="js/amazeui.js"></script>
 	
 		<script type="text/javascript" src="js/base.js"></script>
+		<script type="text/javascript" src="js/main.js" ></script>
 	</head>
 	<body>
 		<header data-am-widget="header" class="am-header am-header-default am-header-fixed" id="nav-header">
 	      	<div class="am-header-left am-header-nav">
-	          <a href="login.html" class="">
+	          <a id="btn-back">
 				<img class="am-header-icon-custom" src="data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 12 20&quot;&gt;&lt;path d=&quot;M10,0l2,2l-8,8l8,8l-2,2L0,10L10,0z&quot; fill=&quot;%23fff&quot;/&gt;&lt;/svg&gt;" alt=""/>
 	          </a>
 	      	</div>
@@ -29,9 +30,9 @@
 				首页
 	        </h1>
 	        <div class="am-header-right am-header-nav">
-	        	<a href="#right-link" class="">
+	        	<a id='btn-alarm'>
 	        		<span class="am-icon-bell am-icon-sm">
-	        		<span class="am-badge am-badge-danger am-round haunle">5</span>
+	        		<span class="am-badge am-badge-danger am-round haunle">2</span>
 	        	</a>
 	        </div>
       	</header>
@@ -52,7 +53,7 @@
 					<hr data-am-widget="divider" style="width:98%;" class="am-divider am-divider-dashed" />
 					<li>
 						<div class="am-g am-g-fixed g-evaluation">
-							<span class="am-u-sm-3"><img src="img/f-best.png" alt="" /><div>水量平衡</div></span>
+							<span class="am-u-sm-3"><img src="img/f-medium.png" alt="" /><div>水量平衡</div></span>
 							<span class="am-u-sm-3"><img src="img/f-good.png" alt="" /><div>治理设施</div></span>
 							<span class="am-u-sm-3"><img src="img/f-medium.png" alt="" /><div>超标排放</div></span>
 							<span class="am-u-sm-3"><img src="img/f-bad.png" alt="" /><div>排污总量</div></span>
@@ -69,13 +70,13 @@
 				</ul>
 			</div>
 			
-			<div class="am-panel am-panel-default">
+			<div class="am-panel am-panel-default g-second-panel">
 				<ul class="am-list g-waring-list">
 					<li>
 						<a>
 							<img class="widget-icon" src="img/waring.png" alt="Accordion">
 							<div>
-								<span class="waring-info">#2排污口超标，建议即时处理</span> <br/>
+								<span class="waring-info" data-abdevice="ORP">#酸洗机状态异常，建议即时处理</span> <br/>
 								<span>2016-02-25 15:30</span>
 							</div>
 						</a>
@@ -84,34 +85,7 @@
 						<a>
 							<img class="widget-icon" src="img/waring.png" alt="Accordion">
 							<div>
-								<span class="waring-info">#2排污口超标，建议即时处理</span> <br/>
-								<span>2016-02-25 15:30</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a>
-							<img class="widget-icon" src="img/waring.png" alt="Accordion">
-							<div>
-								<span class="waring-info">#2排污口超标，建议即时处理</span> <br/>
-								<span>2016-02-25 15:30</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a>
-							<img class="widget-icon" src="img/waring.png" alt="Accordion">
-							<div>
-								<span class="waring-info">#2排污口超标，建议即时处理</span> <br/>
-								<span>2016-02-25 15:30</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a>
-							<img class="widget-icon" src="img/waring.png" alt="Accordion">
-							<div>
-								<span class="waring-info">#2排污口超标，建议即时处理</span> <br/>
+								<span class="waring-info" data-abdevice="FCT">#吊机#2发生异常，建议即时处理</span> <br/>
 								<span>2016-02-25 15:30</span>
 							</div>
 						</a>
@@ -120,7 +94,7 @@
 			</div>
       	</div>
 		
-      	
+      	 
       	<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default" id="nav-bottom">
 			<ul class="am-navbar-nav am-cf am-avg-sm-4">
 				<li>

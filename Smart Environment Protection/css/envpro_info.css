@@ -49,6 +49,27 @@
 	bottom: -25px;
 }
 
+@media screen and (min-width: 1201px)
+{
+	#slider-pic .am-slides img{
+		height: 800px;
+	}	
+}
+
+@media screen and (max-width: 1200px)
+{
+	#slider-pic .am-slides img{
+		height: 400px;
+	}	
+}
+
+@media screen and (max-width: 500px)
+{
+	#slider-pic .am-slides img{
+		height: 200px;
+	}
+}
+
 
 #pic-title {
 	width:79%;
@@ -64,3 +85,13 @@
 	margin:0 5px;
 }
 
+/*
+ * news-content样式
+ */
+.news-content img{
+	width: 100%;
+	padding:0 8px;
+}
+.news-content p{
+	text-indent:2em
+}
