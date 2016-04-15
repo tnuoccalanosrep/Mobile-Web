@@ -48,8 +48,9 @@ li {
 }
 
 
-.am-g div:hover ul{
-	display:block;
+.am-g div ul li:hover{
+	color: #F2F2F2;
+	background:#3CA251;
 }
 .am-g .g-option {
 	color:black;
@@ -177,6 +178,6 @@ li {
 
 .histogram-bg-line li div,
 .histogram-y li {
-	height: 32px;
+	height: 50px;
 	/*控制单元格的高度及百分比的高度，使百分数与线条对齐*/
 }

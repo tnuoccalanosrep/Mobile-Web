@@ -5,6 +5,20 @@ $(function() {
 			//do something else
     });
   setBarAnimation();
+  
+  $('.g-option').on('click', function(e){
+  	$('.g-selector ul').not($(this).parent().find('ul')).each(function(){
+  			$(this).css('display','none');
+  	});
+  	if($(this).parent().find('ul').css('display') == 'none'){
+  		$(this).parent().find('ul').css('display','block');	
+  	}
+  	else{
+  		$(this).parent().find('ul').css('display','none');
+  	}
+  });
+  
+  
   $('.g-selector li').on('click',function(e){
   	var target =  $(e.target);
   	var text = target.text();
@@ -14,6 +28,8 @@ $(function() {
   		$('.histogram-footer').html('<span>&nbsp;</span>' + text);
   	}
   	setCoordinate(text);
+  	$(this).parent().fadeOut(500);
+  	
   });
   
 });

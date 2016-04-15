@@ -3,6 +3,35 @@ $(function(){
 	RegEvent();
 });
 
+
+
+
+/*
+ * method:get the news info and put it into correct place
+ */
+function getNewsInfo(){
+	clearContent();
+	var type = $('#news-sort .g-active').index('#news-sort a');
+	type = type + 1;
+	$.ajax({
+				type: "get",
+				timeout: 1000,
+				dataType: 'jsonp',
+				jsonp:'jsoncallback',
+				data: {newstype:type},
+				url: "http://183.62.9.189:8270/SmartEnv/news/getNewsInfo",
+				async: false,
+				success: function(result) {
+					setNewsBanner(result.newsbanners);
+					setNewsInfo(result.newsinfos);
+				},
+				error: function(result) {
+					var elem = result;
+				}
+			});
+}
+
+
 /*
  * 首次加载页面时设置第一个新闻banner标题
  */
@@ -44,31 +73,6 @@ function setContent(url) {
 
 function changeBackBtnState(){
 	$('#btn-back').attr('data-state', 1);
-}
-
-/*
- * method:get the news info and put it into correct place
- */
-function getNewsInfo(){
-	clearContent();
-	var type = $('#news-sort .g-active').index('#news-sort a');
-	type = type + 1;
-	$.ajax({
-				type: "get",
-				timeout: 1000,
-				dataType: 'jsonp',
-				jsonp:'jsoncallback',
-				data: {newstype:type},
-				url: "http://183.62.9.189:8270/SmartEnv/news/getNewsInfo",
-				async: false,
-				success: function(result) {
-					setNewsBanner(result.newsbanners);
-					setNewsInfo(result.newsinfos);
-				},
-				error: function(result) {
-					var elem = result;
-				}
-			});
 }
 
 function clearContent(){

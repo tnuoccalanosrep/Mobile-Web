@@ -3,7 +3,7 @@
     "id": "H5A1D49C8",/*应用的标识，创建应用时自动生成，勿手动修改*/
     "name": "智慧环保Demo",/*应用名称，程序桌面图标名称*/
     "version": {
-        "name": "1.0",/*应用版本名称*/
+        "name": "0.1",/*应用版本名称*/
         "code": ""
     },
     "description": "",/*应用描述信息*/
@@ -146,7 +146,8 @@
 					"js/jquery.js",
 					"welcome.html",
 					"main.html",
-					"js/hammer.js"
+					"js/hammer.js",
+					"fonts/fontawesome-webfont.woff2"
 				],
 				"refer": [],
 				"priority": 0
@@ -191,7 +192,13 @@
 					"js/hammer.js",
 					"img/admin1.png",
 					"more.html",
-					"about.html"
+					"about.html",
+					"js/base.js",
+					"css/base.css",
+					"js/amazeui.js",
+					"css/amazeui.min.css",
+					"js/jquery.js",
+					"fonts/fontawesome-webfont.woff2"
 				],
 				"refer": [],
 				"priority": 0
@@ -249,7 +256,14 @@
 					"js/report.js",
 					"css/report.css",
 					"monitor.html",
-					"js/hammer.js"
+					"js/hammer.js",
+					"js/base.js",
+					"css/base.css",
+					"js/amazeui.js",
+					"fonts/fontawesome-webfont.woff",
+					"css/amazeui.min.css",
+					"js/jquery.js",
+					"main.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -331,7 +345,6 @@
 				"css/amazeui.flat.min.css",
 				"base.html",
 				"fonts/fontawesome-webfont.ttf",
-				"fonts/fontawesome-webfont.woff2",
 				"js/amazeui.widgets.helper.js",
 				"fonts/FontAwesome.otf",
 				"fonts/fontawesome-webfont.eot",
